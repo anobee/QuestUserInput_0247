@@ -1,10 +1,16 @@
 package com.example.questuserinput_0247.ui.theme
 
+import android.R
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.rememberSearchBarState
 import androidx.compose.runtime.mutableStateOf
 import java.lang.reflect.Modifier
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 
 ?
 
@@ -16,6 +22,16 @@ fun FormDataDiri(modifier: Modifier){
     var TextAlamat by remember {mutableStateOf(value="") }
     var TextJK by remember {mutableStateOf(value="") }
 
-    var
+    var Nama by remember { mutableStateOf(value="") }
+    var Alamat by remember { mutableStateOf(value="") }
+    var Jenis by remember { mutableStateOf(value="") }
+    val Gender: List<String> = listOf("laki-laki","Perempuan")
+    Column(modifier = Modifier.padding(top = 50.dp),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.Horizontal) { }
+
+
+
+
 }
 
