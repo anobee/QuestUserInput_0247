@@ -1,15 +1,17 @@
 package com.example.questuserinput_0247.ui.theme
 
-import android.R
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.material3.Button
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -17,10 +19,8 @@ import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberSearchBarState
 import androidx.compose.runtime.mutableStateOf
-import java.lang.reflect.Modifier
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.runtime.getValue
@@ -28,6 +28,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
+import com.example.questuserinput_0247.R
 
 
 @Composable
@@ -83,8 +84,7 @@ fun FormDataDiri(modifier: Modifier){
 
         HorizontalDivider(
             modifier = Modifier.padding(
-                bottom =
-                    dimensionResource(R.dimen.padding_medium,
+                bottom = dimensionResource(R.dimen.padding_medium),
                         top =dimensionResource(
                         id = R.dimen.padding_medium
                     )),
@@ -94,7 +94,7 @@ fun FormDataDiri(modifier: Modifier){
         )
 
         Button(
-            modifier = Modifier.fillMaxWidth(fraction = 1f)
+            modifier = Modifier.fillMaxWidth(fraction = 1f),
             enabled = TextAlamat.isNotEmpty(),
             onClick = {
                 Nama = TextNama
@@ -104,6 +104,7 @@ fun FormDataDiri(modifier: Modifier){
         ) {
             Text(stringResource(id=R.string.submit))
         }
+
         HorizontalDivider(modifier = Modifier.padding(
             bottom =
                 dimensionResource(R.dimen.padding_medium,
@@ -114,6 +115,22 @@ fun FormDataDiri(modifier: Modifier){
             color = Color.DarkGray
         )
         )
+
+        ElevatedCard(
+            elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.Black),
+            modifier = Modifier
+                .height(100.dp)
+                .width(300.dp)
+        ) {
+            Column(modifier = Modifier.padding
+                (horizontal = 5.dp, vertical = 15.dp),
+            ) {
+                Text(text = "Nama : " +Nama,Color.White)
+                Text(text = "Gender : " +Gender,Color.White)
+                Text(text = "Alamat : " +Alamat,Color.White)
+            }
+        }
 
 
 
