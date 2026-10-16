@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.RadioButton
+import androidx.compose.material3.Text
 import androidx.compose.material3.rememberSearchBarState
 import androidx.compose.runtime.mutableStateOf
 import java.lang.reflect.Modifier
@@ -15,6 +17,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
+
 
 
 
@@ -45,7 +50,17 @@ fun FormDataDiri(modifier: Modifier){
         )
         Row(){
             gender.forEach{ item ->
-                Row(modifier = Modifier.selectable()) { }
+                Row(modifier = Modifier.selectable(
+                    selected = TextJK == item,
+                    onClick = {TextJK =item}
+                ),
+                    verticalAlignment = Alignment.CenterVertically) {
+                    RadioButton(
+                        selected = textJK == item,
+                        onClick = {
+                            textJK = item
+                        })
+                }
 
             }
         }
