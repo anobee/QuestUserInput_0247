@@ -39,13 +39,13 @@ fun FormDataDiri(modifier: Modifier){
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally) {
         OulinedTextField(
-            value = textNama,
+            value = TextNama,
             singleLine = true,
             shape = MaterialTheme.shapes.large,
             modifier = modifier.width(250.dp),
             label = {Text(text = "Nama Lengkap")},
             onValueChange = {
-                textNama = it
+                TextNama = it
             }
         )
         Row(){
@@ -56,9 +56,9 @@ fun FormDataDiri(modifier: Modifier){
                 ),
                     verticalAlignment = Alignment.CenterVertically) {
                     RadioButton(
-                        selected = textJK == item,
+                        selected = TextJK == item,
                         onClick = {
-                            textJK = item
+                            TextJK = item
                         })
                 }
 
