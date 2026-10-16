@@ -5,8 +5,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberSearchBarState
@@ -38,11 +40,11 @@ fun FormDataDiri(modifier: Modifier){
     Column(modifier = Modifier.padding(top = 50.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally) {
-        OulinedTextField(
+        OutlinedTextField(
             value = TextNama,
             singleLine = true,
             shape = MaterialTheme.shapes.large,
-            modifier = modifier.width(250.dp),
+            modifier = Modifier.width(250.dp),
             label = {Text(text = "Nama Lengkap")},
             onValueChange = {
                 TextNama = it
@@ -65,6 +67,16 @@ fun FormDataDiri(modifier: Modifier){
 
             }
         }
+
+        OutlinedTextField(
+            value = TextAlamat,
+            singleLine = true,
+            modifier = Modifier.width(250.dp),
+            label = {Text(text = "Nama Lengkap")},
+            onValueChange = {
+                TextAlamat = it
+            }
+        )
     }
 
 
