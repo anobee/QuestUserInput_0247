@@ -3,7 +3,9 @@ package com.example.questuserinput_0247.ui.theme
 import android.R
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.rememberSearchBarState
 import androidx.compose.runtime.mutableStateOf
@@ -40,9 +42,13 @@ fun FormDataDiri(modifier: Modifier){
             onValueChange = {
                 textNama = it
             }
-
-
         )
+        Row(){
+            gender.forEach{ item ->
+                Row(modifier = Modifier.selectable()) { }
+
+            }
+        }
     }
 
 
