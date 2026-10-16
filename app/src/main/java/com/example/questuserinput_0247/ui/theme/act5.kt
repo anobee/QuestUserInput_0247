@@ -108,7 +108,7 @@ fun FormDataDiri(modifier: Modifier){
         HorizontalDivider(modifier = Modifier.padding(
             bottom =
                 dimensionResource(R.dimen.padding_medium,
-                    top =dimensionResource(
+                    top = dimensionResource(
                         id = R.dimen.padding_medium
                     )),
             thickness = dimensionResource(id = R.dimen.divider_tipis),
@@ -124,11 +124,11 @@ fun FormDataDiri(modifier: Modifier){
                 .width(300.dp)
         ) {
             Column(modifier = Modifier.padding
-                (horizontal = 5.dp, vertical = 15.dp),
-            ) {
-                Text(text = "Nama : " +Nama,Color.White)
-                Text(text = "Gender : " +Gender,Color.White)
-                Text(text = "Alamat : " +Alamat,Color.White)
+                (horizontal = 5.dp, vertical = 15.dp),)
+            {
+                Text(text = "Nama : " +Nama,color = Color.White)
+                Text(text = "Gender : " +Gender,color = Color.White)
+                Text(text = "Alamat : " +Alamat,color = Color.White)
             }
         }
 
